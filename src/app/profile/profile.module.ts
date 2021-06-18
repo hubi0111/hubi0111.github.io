@@ -10,6 +10,7 @@ import { AboutComponent } from './about/about.component';
 import { SkillsComponent } from './skills/skills.component';
 import { ExperienceComponent } from './experience/experience.component';
 import { EducationComponent } from './education/education.component';
+import { ExtracurriculumComponent} from './extracurriculum/extracurriculum.component';
 import { ContactComponent } from './contact/contact.component';
 import { NgxSpinnerModule } from '../../../node_modules/ngx-spinner';
 import { ProjectsComponent } from './projects/projects.component';
@@ -32,6 +33,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
     SkillsComponent,
     ExperienceComponent,
     EducationComponent,
+    ExtracurriculumComponent,
     ContactComponent,
     ProjectsComponent
   ],
