@@ -203,6 +203,7 @@ fieldset[disabled]
 .btn-primary {
   background-color: rgb(21, 70, 95);
   color: #FFFFFF;
+  text-align: center;
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .btn-primary:active:focus, .btn-primary:active:hover, .btn-primary.active:focus, .btn-primary.active:hover,
