@@ -131,7 +131,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<div class=\"section\" id=\"extracurriculum\">\n    <div class=\"container cc-reference\">\n        <div class=\"h4 mb-4 text-center title\">ExtraCurriculum</div>\n        <div class=\"card\" data-aos=\"zoom-in\">\n            <div class=\"carousel slide\" id=\"cc-Indicators\" data-ride=\"carousel\">\n                <ol class=\"carousel-indicators\">\n                    <li class=\"active\" data-target=\"#cc-Indicators\" data-slide-to=\"0\"></li>\n                    <li data-target=\"#cc-Indicators\" data-slide-to=\"1\"></li>\n                    <li data-target=\"#cc-Indicators\" data-slide-to=\"2\"></li>\n\n                </ol>\n                <div class=\"carousel-inner\">\n                    <div class=\"carousel-item active\">\n                        <div class=\"row\">\n                            <div class=\"col-lg-2 col-md-3 cc-reference-header\">\n                                <img src=\"assets/images/vb.png\" alt=\"Image\" />\n                                <div class=\"h5 pt-2\">Volleyball</div>\n                                <p class=\"category\">HS Player </p>\n                            </div>\n                            <div class=\"col-lg-10 col-md-9\">\n                                <p>\n                                    Filler Text\n                                </p>\n                            </div>\n                        </div>\n                    </div>\n\n                    <div class=\"carousel-item \">\n                        <div class=\"row\">\n                            <div class=\"col-lg-2 col-md-3 cc-reference-header\">\n                                <img src=\"assets/images/music.png\" alt=\"Image\" />\n                                <div class=\"h5 pt-2\">Music</div>\n                                <p class=\"category\">HS Orchestra </p>\n                            </div>\n                            <div class=\"col-lg-10 col-md-9\">\n                                <p>\n                                    Filler Text\n                                </p>\n                            </div>\n                        </div>\n                    </div>\n\n                    <div class=\"carousel-item \">\n                        <div class=\"row\">\n                            <div class=\"col-lg-2 col-md-3 cc-reference-header\">\n                                <img src=\"assets/images/lg.png\" alt=\"Image\" />\n                                <div class=\"h5 pt-2\">LifeGuard</div>\n                                <p class=\"category\">Local Pool </p>\n                            </div>\n                            <div class=\"col-lg-10 col-md-9\">\n                                <p>\n                                    Filler Text\n                                </p>\n                            </div>\n                        </div>\n                    </div>\n\n                </div>\n            </div>\n        </div>\n    </div>\n</div>";
+    __webpack_exports__["default"] = "<div class=\"section\" id=\"extracurriculum\">\n    <div class=\"container cc-extracurriculum\">\n        <div class=\"h4 text-center mb-4 title\">ExtraCurriculum</div>\n\n        <pagination-controls (pageChange)=\"pageChanged($event)\"></pagination-controls>\n        <div class=\"row\">\n\n            <ng-container *ngFor=\"let extra of extracurriculum| paginate: config\">\n                <div class=\"col-md-4 col-sm-6 animate-box\" data-animate-effect=\"fadeInLeft\">\n                    <div class=\"blog-entry\">\n                        <div class=\"card\">\n                            <img class=\"card-img-top\" src={{extra.imgUrl}} onerror=\"this.src = 'assets/images/gif.gif'\"\n                                alt=\"Card image\" style=\"width:100%\">\n                            <div class=\"card-body\">\n                                <h4 class=\"card-title\">{{extra.title}}</h4>\n                                <p class=\"card-text\">{{extra.desc}}</p>\n\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </ng-container>\n        </div>\n\n        <pagination-controls (pageChange)=\"pageChanged($event)\"></pagination-controls>\n    </div>\n</div>";
     /***/
   },
 
@@ -1356,11 +1356,39 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var ExtracurriculumComponent = /*#__PURE__*/function () {
       function ExtracurriculumComponent() {
         _classCallCheck(this, ExtracurriculumComponent);
+
+        this.extracurriculum = [{
+          id: 1,
+          title: 'Volleyball',
+          desc: 'HS Player',
+          imgUrl: 'assets/images/vb.png'
+        }, {
+          id: 2,
+          title: 'Music',
+          desc: 'HS Orchestra',
+          imgUrl: 'assets/images/music.png'
+        }, {
+          id: 3,
+          title: 'LifeGuard',
+          desc: 'Local Pool',
+          imgUrl: 'assets/images/lg.png'
+        }];
       }
 
       _createClass(ExtracurriculumComponent, [{
         key: "ngOnInit",
-        value: function ngOnInit() {}
+        value: function ngOnInit() {
+          this.config = {
+            itemsPerPage: 3,
+            currentPage: 1,
+            totalItems: this.extracurriculum.length
+          };
+        }
+      }, {
+        key: "pageChanged",
+        value: function pageChanged(event) {
+          this.config.currentPage = event;
+        }
       }]);
 
       return ExtracurriculumComponent;
@@ -1889,16 +1917,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           id: 1,
           title: 'Multi-Channel Authentication with DI',
           desc: 'Multi-channel authentication for various authentication services',
-          githurl: 'https://github.com/hubi0111/Multi-channel-authentication-with-DJ-in-NODE-JS',
+          githurl: 'https://github.com/hubi0111/multi-channel-authentication-with-DI-Java',
           imgUrl: 'assets/images/z4.PNG',
-          tech: 'Node JS, React, MongoDB'
+          tech: 'React, Java, MongoDB'
         }, {
           id: 2,
           title: 'Dynamic Configurable Menu',
-          desc: 'Authenticate user and dynamically configure menu from user role',
+          desc: 'Menu options change depending on authenticated user role',
           githurl: 'https://github.com/hubi0111/Configurable-authorization-and-menu-navigation-in-NODE-JS',
           imgUrl: 'assets/images/z5.png',
-          tech: 'Node JS, React, MongoDB'
+          tech: 'React, Node JS, MongoDB'
         }, {
           id: 3,
           title: 'Menu App',

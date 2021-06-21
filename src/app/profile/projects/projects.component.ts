@@ -12,18 +12,18 @@ export class ProjectsComponent implements OnInit {
       id: 1,
       title: 'Multi-Channel Authentication with DI',
       desc: 'Multi-channel authentication for various authentication services',
-      githurl: 'https://github.com/hubi0111/Multi-channel-authentication-with-DJ-in-NODE-JS',
+      githurl: 'https://github.com/hubi0111/multi-channel-authentication-with-DI-Java',
       imgUrl: 'assets/images/z4.PNG',
-      tech: 'Node JS, React, MongoDB'
+      tech: 'React, Java, MongoDB'
     },
 
     {
       id: 2,
       title: 'Dynamic Configurable Menu',
-      desc: 'Authenticate user and dynamically configure menu from user role',
+      desc: 'Menu options change depending on authenticated user role',
       githurl: 'https://github.com/hubi0111/Configurable-authorization-and-menu-navigation-in-NODE-JS',
       imgUrl: 'assets/images/z5.png',
-      tech: 'Node JS, React, MongoDB'
+      tech: 'React, Node JS, MongoDB'
     },
 
     {

@@ -1,62 +1,27 @@
 <div class="section" id="extracurriculum">
-    <div class="container cc-reference">
-        <div class="h4 mb-4 text-center title">ExtraCurriculum</div>
-        <div class="card" data-aos="zoom-in">
-            <div class="carousel slide" id="cc-Indicators" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li class="active" data-target="#cc-Indicators" data-slide-to="0"></li>
-                    <li data-target="#cc-Indicators" data-slide-to="1"></li>
-                    <li data-target="#cc-Indicators" data-slide-to="2"></li>
+    <div class="container cc-extracurriculum">
+        <div class="h4 text-center mb-4 title">ExtraCurriculum</div>
 
-                </ol>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="row">
-                            <div class="col-lg-2 col-md-3 cc-reference-header">
-                                <img src="assets/images/vb.png" alt="Image" />
-                                <div class="h5 pt-2">Volleyball</div>
-                                <p class="category">HS Player </p>
-                            </div>
-                            <div class="col-lg-10 col-md-9">
-                                <p>
-                                    Filler Text
-                                </p>
+        <pagination-controls (pageChange)="pageChanged($event)"></pagination-controls>
+        <div class="row">
+
+            <ng-container *ngFor="let extra of extracurriculum| paginate: config">
+                <div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
+                    <div class="blog-entry">
+                        <div class="card">
+                            <img class="card-img-top" src={{extra.imgUrl}} onerror="this.src = 'assets/images/gif.gif'"
+                                alt="Card image" style="width:100%">
+                            <div class="card-body">
+                                <h4 class="card-title">{{extra.title}}</h4>
+                                <p class="card-text">{{extra.desc}}</p>
+
                             </div>
                         </div>
                     </div>
-
-                    <div class="carousel-item ">
-                        <div class="row">
-                            <div class="col-lg-2 col-md-3 cc-reference-header">
-                                <img src="assets/images/music.png" alt="Image" />
-                                <div class="h5 pt-2">Music</div>
-                                <p class="category">HS Orchestra </p>
-                            </div>
-                            <div class="col-lg-10 col-md-9">
-                                <p>
-                                    Filler Text
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="carousel-item ">
-                        <div class="row">
-                            <div class="col-lg-2 col-md-3 cc-reference-header">
-                                <img src="assets/images/lg.png" alt="Image" />
-                                <div class="h5 pt-2">LifeGuard</div>
-                                <p class="category">Local Pool </p>
-                            </div>
-                            <div class="col-lg-10 col-md-9">
-                                <p>
-                                    Filler Text
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
-            </div>
+            </ng-container>
         </div>
+
+        <pagination-controls (pageChange)="pageChanged($event)"></pagination-controls>
     </div>
 </div>
