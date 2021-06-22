@@ -14,13 +14,13 @@ export class ProjectsComponent implements OnInit {
       desc: 'Multi-channel authentication for various authentication services',
       githurl: 'https://github.com/hubi0111/multi-channel-authentication-with-DI-Java',
       imgUrl: 'assets/images/z4.PNG',
-      tech: 'React, Java, MongoDB'
+      tech: 'HTML, Java, MySQL'
     },
 
     {
       id: 2,
-      title: 'Dynamic Configurable Menu',
-      desc: 'Menu options change depending on authenticated user role',
+      title: 'Dynamically Configurable User Navigation Menu',
+      desc: 'User role navigation menus are configured, then loaded dynamically in runtime',
       githurl: 'https://github.com/hubi0111/Configurable-authorization-and-menu-navigation-in-NODE-JS',
       imgUrl: 'assets/images/z5.png',
       tech: 'React, Node JS, MongoDB'
@@ -28,7 +28,7 @@ export class ProjectsComponent implements OnInit {
 
     {
       id: 3,
-      title: 'Menu App',
+      title: 'Food Order App',
       desc: 'App to order food from restaurant with user roles',
       githurl: 'https://github.com/hubi0111/Menu-App',
       imgUrl: 'assets/images/z26.png',
