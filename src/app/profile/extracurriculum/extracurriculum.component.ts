@@ -35,6 +35,7 @@ export class ExtracurriculumComponent implements OnInit {
 
   ngOnInit() {
     this.config = {
+      id: "pagination2",
       itemsPerPage: 3,
       currentPage: 1,
       totalItems: this.extracurriculum.length

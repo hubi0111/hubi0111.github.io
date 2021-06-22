@@ -2,7 +2,7 @@
     <div class="container cc-extracurriculum">
         <div class="h4 text-center mb-4 title">ExtraCurriculum</div>
 
-        <pagination-controls (pageChange)="pageChanged($event)"></pagination-controls>
+        <pagination-controls id="pagination2" (pageChange)="pageChanged($event)"></pagination-controls>
         <div class="row">
 
             <ng-container *ngFor="let extra of extracurriculum| paginate: config">
@@ -22,6 +22,6 @@
             </ng-container>
         </div>
 
-        <pagination-controls (pageChange)="pageChanged($event)"></pagination-controls>
+        <pagination-controls id="pagination2" (pageChange)="pageChanged($event)"></pagination-controls>
     </div>
 </div>

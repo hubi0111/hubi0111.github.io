@@ -131,7 +131,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<div class=\"section\" id=\"extracurriculum\">\n    <div class=\"container cc-extracurriculum\">\n        <div class=\"h4 text-center mb-4 title\">ExtraCurriculum</div>\n\n        <pagination-controls (pageChange)=\"pageChanged($event)\"></pagination-controls>\n        <div class=\"row\">\n\n            <ng-container *ngFor=\"let extra of extracurriculum| paginate: config\">\n                <div class=\"col-md-4 col-sm-6 animate-box\" data-animate-effect=\"fadeInLeft\">\n                    <div class=\"blog-entry\">\n                        <div class=\"card\">\n                            <img class=\"card-img-top\" src={{extra.imgUrl}} onerror=\"this.src = 'assets/images/gif.gif'\"\n                                alt=\"Card image\" style=\"width:100%\">\n                            <div class=\"card-body\">\n                                <h4 class=\"card-title\">{{extra.title}}</h4>\n                                <p class=\"card-text\">{{extra.desc}}</p>\n\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </ng-container>\n        </div>\n\n        <pagination-controls (pageChange)=\"pageChanged($event)\"></pagination-controls>\n    </div>\n</div>";
+    __webpack_exports__["default"] = "<div class=\"section\" id=\"extracurriculum\">\n    <div class=\"container cc-extracurriculum\">\n        <div class=\"h4 text-center mb-4 title\">ExtraCurriculum</div>\n\n        <pagination-controls id=\"pagination2\" (pageChange)=\"pageChanged($event)\"></pagination-controls>\n        <div class=\"row\">\n\n            <ng-container *ngFor=\"let extra of extracurriculum| paginate: config\">\n                <div class=\"col-md-4 col-sm-6 animate-box\" data-animate-effect=\"fadeInLeft\">\n                    <div class=\"blog-entry\">\n                        <div class=\"card\">\n                            <img class=\"card-img-top\" src={{extra.imgUrl}} onerror=\"this.src = 'assets/images/gif.gif'\"\n                                alt=\"Card image\" style=\"width:100%\">\n                            <div class=\"card-body\">\n                                <h4 class=\"card-title\">{{extra.title}}</h4>\n                                <p class=\"card-text\">{{extra.desc}}</p>\n\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </ng-container>\n        </div>\n\n        <pagination-controls id=\"pagination2\" (pageChange)=\"pageChanged($event)\"></pagination-controls>\n    </div>\n</div>";
     /***/
   },
 
@@ -231,7 +231,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<div class=\"section\" id=\"projects\">\r\n    <div class=\"container cc-education\">\r\n        <div class=\"h4 text-center mb-4 title\">Projects</div>\r\n\r\n        <pagination-controls (pageChange)=\"pageChanged($event)\"></pagination-controls>\r\n        <div class=\"row\">\r\n\r\n            <ng-container *ngFor=\"let project of projects| paginate: config\">\r\n                <div class=\"col-md-4 col-sm-6 animate-box\" data-animate-effect=\"fadeInLeft\">\r\n                    <div class=\"blog-entry\">\r\n                        <div class=\"card\">\r\n                            <img class=\"card-img-top\" src={{project.imgUrl}} onerror=\"this.src = 'assets/images/gif.gif'\" alt=\"Card image\" style=\"width:100%\">\r\n                            <div class=\"card-body\">\r\n                                <h4 class=\"card-title\">{{project.title}}</h4>\r\n                                <p class = \"card-text\">{{project.desc}}</p>\r\n                                <h5 class=\"card-text\"><b>Technology :</b> {{project.tech}} </h5>\r\n                                <a href={{project.githurl}} target=\"_blank\" class=\"btn btn-primary stretched-link\">GithubLink</a>\r\n\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </ng-container>\r\n        </div>\r\n\r\n        <pagination-controls (pageChange)=\"pageChanged($event)\"></pagination-controls>\r\n    </div>\r\n</div>";
+    __webpack_exports__["default"] = "<div class=\"section\" id=\"projects\">\r\n    <div class=\"container cc-education\">\r\n        <div class=\"h4 text-center mb-4 title\">Projects</div>\r\n\r\n        <pagination-controls id=\"pagination1\" (pageChange)=\"pageChanged($event)\"></pagination-controls>\r\n        <div class=\"row\">\r\n\r\n            <ng-container *ngFor=\"let project of projects| paginate: config\">\r\n                <div class=\"col-md-4 col-sm-6 animate-box\" data-animate-effect=\"fadeInLeft\">\r\n                    <div class=\"blog-entry\">\r\n                        <div class=\"card\">\r\n                            <img class=\"card-img-top\" src={{project.imgUrl}} onerror=\"this.src = 'assets/images/gif.gif'\" alt=\"Card image\" style=\"width:100%\">\r\n                            <div class=\"card-body\">\r\n                                <h4 class=\"card-title\">{{project.title}}</h4>\r\n                                <p class = \"card-text\">{{project.desc}}</p>\r\n                                <h5 class=\"card-text\"><b>Technology:</b> {{project.tech}} </h5>\r\n                                <a href={{project.githurl}} target=\"_blank\" class=\"btn btn-primary stretched-link\">GithubLink</a>\r\n\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </ng-container>\r\n        </div>\r\n\r\n        <pagination-controls id=\"pagination1\" (pageChange)=\"pageChanged($event)\"></pagination-controls>\r\n    </div>\r\n</div>";
     /***/
   },
 
@@ -1384,6 +1384,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "ngOnInit",
         value: function ngOnInit() {
           this.config = {
+            id: "pagination2",
             itemsPerPage: 3,
             currentPage: 1,
             totalItems: this.extracurriculum.length
@@ -1960,6 +1961,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "ngOnInit",
         value: function ngOnInit() {
           this.config = {
+            id: "pagination1",
             itemsPerPage: 3,
             currentPage: 1,
             totalItems: this.projects.length
