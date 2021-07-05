@@ -9,8 +9,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "dev": "lite-server",
-    "deploy": "ng build --output-path docs --base-href /Personal-Website2/",
-    "deploy-static": "ng deploy --base-href=/hubi0111.github.io/"
+    "deploy": "ng build --output-path docs --base-href /"
   },
   "private": true,
   "dependencies": {
